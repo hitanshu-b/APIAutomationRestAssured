@@ -1,8 +1,8 @@
-package org.example;
+package org.example.tests.crud.GET;
 
 import io.restassured.RestAssured;
 
-public class RATestCase {
+public class BDDStyleGET {
     public static void main(String[] args) {
         //GET Request - https://api.zippopotam.us/IN/440015
         //URL

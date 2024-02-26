@@ -1,4 +1,4 @@
-package org.example;
+package org.example.BPDemo;
 
 public class BuilderPattern {
     //Change return type of each method as Class Type
