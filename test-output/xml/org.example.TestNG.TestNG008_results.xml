@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/hitan/IdeaProjects/APIAutomationRestAssured"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.010">
+    <properties></properties>
+
+
+
+            <testcase
+                name="regRun"
+                time="0.008"
+                classname="org.example.TestNG.TestNG008">
+            </testcase>
+            <testcase
+                name="sanityRun"
+                time="0.002"
+                classname="org.example.TestNG.TestNG008">
+            </testcase>
+</testsuite>

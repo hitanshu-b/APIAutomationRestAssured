@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.009">
+    <properties></properties>
+
+
+
+            <testcase
+                name="serverStarted"
+                time="0.008"
+                classname="org.example.TestNG.TestNG011">
+            </testcase>
+            <testcase
+                name="requiredMethod"
+                time="0.001"
+                classname="org.example.TestNG.TestNG011">
+            </testcase>
+</testsuite>
