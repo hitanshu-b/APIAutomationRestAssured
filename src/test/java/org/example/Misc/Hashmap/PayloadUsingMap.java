@@ -1,4 +1,4 @@
-package org.example.Misc;
+package org.example.Misc.Hashmap;
 
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
@@ -9,6 +9,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PayloadUsingMap {
@@ -31,16 +32,16 @@ public class PayloadUsingMap {
 
         // Payload management by using Hashmap
 
-        Map<String, Object> jsonBodyMap = new HashMap<>();
+        Map<String, Object> jsonBodyMap = new LinkedHashMap<>();
         Faker faker = new Faker();
 
         String name = faker.name().fullName();
 
         jsonBodyMap.put("firstname",faker.name().firstName());
         jsonBodyMap.put("lastname",faker.name().lastName());
-        jsonBodyMap.put("totalprice",101);
-        jsonBodyMap.put("bookingdates",true);
-        jsonBodyMap.put("depositpaid", true);
+        jsonBodyMap.put("totalprice",faker.random().nextInt(1000));
+        jsonBodyMap.put("bookingdates",faker.random().nextBoolean());
+        jsonBodyMap.put("depositpaid", faker.random().nextBoolean());
 
         Map<String, Object> bookingDateMap = new HashMap<>();
         bookingDateMap.put("checkin","2024-01-01");

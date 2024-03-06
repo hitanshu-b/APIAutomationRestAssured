@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.075">
+           time="0.020">
     <properties></properties>
 
 
 
             <testcase
-                name="testPostReq"
-                time="5.075"
-                classname="org.example.Misc.PayloadUsingMap">
+                name="testPOST"
+                time="0.020"
+                classname="org.example.Misc.Gson.DemoPojo">
             </testcase>
 </testsuite>
