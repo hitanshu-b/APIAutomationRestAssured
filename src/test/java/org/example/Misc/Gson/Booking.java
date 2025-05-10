@@ -6,6 +6,7 @@ public class Booking {
     private String lastname;
     private Integer totalprice;
     private Boolean depositpaid;
+    private BookingDates bookingDates;
     private String additionalneeds;
 
     public String getFirstname() {
@@ -40,6 +41,14 @@ public class Booking {
         this.depositpaid = depositpaid;
     }
 
+    public BookingDates getBookingDates() {
+        return bookingDates;
+    }
+
+    public void setBookingDates(BookingDates bookingDates) {
+        this.bookingDates = bookingDates;
+    }
+
     public String getAdditionalneeds() {
         return additionalneeds;
     }
@@ -48,15 +57,6 @@ public class Booking {
         this.additionalneeds = additionalneeds;
     }
 
-    private BookingDates bookingDates;
-
-    public BookingDates getBookingDates() {
-        return bookingDates;
-    }
-
-    public void setBookingDates(BookingDates bookingDates) {
-        this.bookingDates = bookingDates;
-    }
 
     @Override
     public String toString() {

@@ -18,7 +18,7 @@ public class NonBDDStylePOST {
                 "    \"password\" : \"password123\"\n" +
                 "}";
 
-        r.baseUri("https://restful-booker.herokuapp.com");
+            r.baseUri("https://restful-booker.herokuapp.com");
         r.basePath("/auth");
         r.contentType(ContentType.JSON);
         r.body(payload);

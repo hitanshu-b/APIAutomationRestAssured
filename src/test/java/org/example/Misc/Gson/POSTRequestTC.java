@@ -38,9 +38,8 @@ public class POSTRequestTC {
 
         Faker faker = new Faker();
         Booking booking = new Booking();
-        String expectFirstName = faker.name().firstName();
-
-        booking.setFirstname(expectFirstName);
+        String expectedFirstName = faker.name().firstName();
+        booking.setFirstname(expectedFirstName);
         booking.setLastname("Anderson");
         booking.setTotalprice(112);
         booking.setDepositpaid(true);
@@ -49,14 +48,14 @@ public class POSTRequestTC {
         bookingdates.setCheckin("2024-02-01");
         bookingdates.setCheckout("2024-02-01");
         booking.setBookingDates(bookingdates);
+
         booking.setAdditionalneeds("Breakfast");
 
         System.out.println(booking);
-        // Object -> JSON String (GSON)
+
         Gson gson = new Gson();
         String jsonStringBooking =  gson.toJson(booking);
         System.out.println(jsonStringBooking);
-
 
         requestSpecification = RestAssured.given();
         requestSpecification.baseUri("https://restful-booker.herokuapp.com");
@@ -70,14 +69,10 @@ public class POSTRequestTC {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-
-        // Validate Response ( JSON String -> Object)
         BookingResponse bookingResponseObject = gson.fromJson(jsonResponseString,BookingResponse.class);
 
         assertThat(bookingResponseObject.getBookingid()).isNotNull();
-        assertThat(bookingResponseObject.getBooking().getFirstname()).isEqualTo(expectFirstName);
-
-
+        assertThat(bookingResponseObject.getBooking().getFirstname()).isEqualTo(expectedFirstName);
 
     }
 

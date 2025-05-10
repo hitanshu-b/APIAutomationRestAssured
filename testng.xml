@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/hitan/IdeaProjects/APIAutomationRestAssured">
+    <test verbose="2" preserve-order="true" name="C:/Users/hitan/IdeaProjects/APIAutomationRestAssured/src/test/java/org/example/Test2.java">
         <classes>
-            <class name="org.example.tests.crud.GET.GETRequestNonBDDTestNG">
+            <class name="org.example.Test.Test2">
                 <methods>
-                    <include name="testGetAllBookingPositive"/>
-                    <include name="testGetAllBookingNegative"/>
-                    <include name="testGetAllBookingNegative2"/>
+                    <include name="testBooking"/>
                 </methods>
             </class>
         </classes>
